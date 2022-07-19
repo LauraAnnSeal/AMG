@@ -1,0 +1,194 @@
+/* -------------------------------------------------------------------------- */
+/*                              Key issue buttons                             */
+/* -------------------------------------------------------------------------- */
+.btn-issue .icon{
+    color: white;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 8px;
+    img{
+        height: 1rem;
+    }
+}
+.btn.btn-light.shadow-none.btn-issue.btn-energy.active, .btn.btn-light.shadow-none.btn-issue.btn-energy:hover{
+    background: $orange;
+    color: white!important;
+}
+.btn-energy .icon{
+    background: $orange;
+}
+.btn.btn-light.shadow-none.btn-issue.btn-land.active, .btn.btn-light.shadow-none.btn-issue.btn-land:hover{
+    background: $green;
+    color: white!important;
+}
+.btn-land .icon{
+    background: $green;
+}
+.btn.btn-light.shadow-none.btn-issue.btn-water.active, .btn.btn-light.shadow-none.btn-issue.btn-water:hover{
+    background: $aqua;
+    color: white!important;
+}
+.btn-water .icon{
+    background: $aqua;
+}
+.btn.btn-light.shadow-none.btn-issue.btn-conservation.active, .btn.btn-light.shadow-none.btn-issue.btn-conservation:hover{
+    background: $indigo;
+    color: white!important;
+}
+.btn-conservation .icon{
+    background: $indigo;
+}
+.btn.btn-light.shadow-none.btn-issue.btn-responses.active, .btn.btn-light.shadow-none.btn-issue.btn-responses:hover{
+    background: $red;
+    color: white!important;
+}
+.btn-responses .icon{
+    background: $red;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                   Key issue buttons on the project pages                   */
+/* -------------------------------------------------------------------------- */
+a.btn.btn-light.btn-issue-general{
+    color: white;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    .icon img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+a.btn.btn-light.btn-issue-general.btn-sm{
+    color: white;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    .icon img {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+.btn-energy.btn-issue-general{
+    background-color: $orange!important;
+    &:hover{
+        border: 2px solid darken($orange, 4);
+    }
+}
+.btn-land.btn-issue-general{
+    background-color: $green!important;
+    &:hover{
+        border: 2px solid darken($green, 4);
+    }
+}
+.btn-water.btn-issue-general{
+    background-color: $aqua!important;
+    &:hover{
+        border: 2px solid darken($aqua, 4);
+    }
+}
+.btn-conservation.btn-issue-general{
+    background-color: $indigo!important;
+    &:hover{
+        border: 2px solid darken($indigo, 4);
+    }
+}
+.btn-responses.btn-issue-general{
+    background-color: $red!important;
+    &:hover{
+        border: 2px solid darken($red, 4);
+    }
+}
+
+a.btn-light.share-btn{
+    color: $dark-grey;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    i {
+       font-size: 1.5rem;
+    }
+}
+/* -------------------------------------------------------------------------- */
+/*                    Location button on the projects page                    */
+/* -------------------------------------------------------------------------- */
+a.btn.btn-light.btn-location-general{
+    height: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+a.btn.btn-light.btn-location-general.btn-sm{
+    height: 1.8rem;
+    font-size: 1.5;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                               Bootstrap Staples                              */
+/* -------------------------------------------------------------------------- */
+.btn{
+    transition: all 0.3s;
+}
+.btn.btn-light{
+    color: $dark-grey;
+    margin-bottom: 5px;
+    background: $pale-grey;
+    &:hover{
+        background: $dark-grey;
+        color: white;
+    }
+}
+.btn.btn-light.active{
+    background: $dark-grey;
+    color: white;
+}
+.btn.btn-success{
+    background-color: $green!important;
+    border: none;
+    margin-bottom: 5px;
+    background: $pale-grey;
+    color: white;
+    font-weight: 600;
+}
+.btn.btn-primary{
+    background-color: $indigo!important;
+    border: none;
+    margin-bottom: 5px;
+    background: $pale-grey;
+    color: white;
+}
+.button-icon{
+    margin-left: 15px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             List group buttons                             */
+/* -------------------------------------------------------------------------- */
+.list-group{
+    border-radius: 15px;
+}
+.list-group-item.list-group-item-action.active{
+    padding-top: 10px;
+    background-color: $dark-grey;
+    border: $dark-grey;
+    color: white;
+}
+.list-group-item.list-group-item-action{
+    font-family: $text-font;
+    font-size: 1rem;
+    color: $charcoal;
+}

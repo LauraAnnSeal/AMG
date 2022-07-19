@@ -1,0 +1,104 @@
+/* -------------------------------------------------------------------------- */
+/*                                   Colors                                   */
+/* -------------------------------------------------------------------------- */
+
+// rainbow
+$green: #7ddf64;
+$aqua: #25c3d1;
+$orange: #f49f0a;
+$red: #ff6b6b;
+$indigo: #56638a;
+
+// shades of grey
+$pale-grey: #F5F5F5;
+$light-grey: #cdcdcd;
+$grey: #b6b5b5;
+$dark-grey: #8E8E8E;
+$charcoal: #5C5C5C;
+
+/* -------------------------------------------------------------------------- */
+/*                                   Color Functions                                  */
+/* -------------------------------------------------------------------------- */
+
+$color-list: (
+    green: #7ddf64,
+    aqua: #25c3d1,
+    orange: #f49f0a,
+    red: #ff6b6b,
+    indigo: #56638a,
+    pale-grey: #F5F5F5,
+    light-grey: #cdcdcd,
+    grey: #c2c1c1,
+    dark-grey: #8E8E8E,
+    charcoal: #5C5C5C
+);
+
+@each $name, $color in $color-list {
+    .bg-#{$name}{
+        background-color: $color;
+    }
+    .text-#{$name}{
+        color: $color;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Fonts                                   */
+/* -------------------------------------------------------------------------- */
+@font-face {
+    font-family: 'Aiglon Wide';
+    src: url('../wan-ifra-amg/assets/fonts/AiglonWePWide-Demi.woff2');
+  }
+@font-face {
+    font-family: 'Aiglon';
+    src: url('../wan-ifra-amg/assets/fonts/AiglonWeP-Bold.woff2');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+$heading-font: 'Aiglon Wide';
+$number-font: 'Aiglon';
+$text-font: 'IBM Plex Sans', sans-serif;
+$light: 300;
+$medium: 400;
+$bold: 600;
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 Breakpoints                                */
+/* -------------------------------------------------------------------------- */
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 2500px;
+
+/* -------------------------------------------------------------------------- */
+/*                              // media queries                              */
+/* -------------------------------------------------------------------------- */
+@mixin mQ ($arg...){
+    @if length($arg) == 1{
+        @media only screen and (min-width: nth($arg, 1)){
+            @content
+        }
+    }
+    @if length($arg) == 2{
+        @media only screen and (min-width: nth($arg, 1)) and (orientation: nth($arg, 2)){
+            @content
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Breakpoints                                */
+/* -------------------------------------------------------------------------- */
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 10000px
+);
+

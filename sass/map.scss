@@ -1,0 +1,312 @@
+/* -------------------------------------------------------------------------- */
+/*                                 Style SVGs                                 */
+/* -------------------------------------------------------------------------- */
+// mobile
+.st0{fill:#CED3DD;}
+.st1{fill:#56638A;}
+.st2{opacity:0.6;}
+.st3{fill:#FFFFFF;stroke:#56638A;stroke-width:2;stroke-miterlimit:10;}
+.st4{opacity:0.6;fill:#FFFFFF;stroke:#56638A;stroke-width:2;stroke-miterlimit:10;}
+.st5{fill:none;}
+
+// desktop
+@include mQ ($md){
+    .st0{opacity:0.6;}
+	.st1{fill:#FFFFFF;stroke:#56638A;stroke-width:2;stroke-miterlimit:10;}
+	.st2{opacity:0.6;fill:#FFFFFF;stroke:#56638A;stroke-width:2;stroke-miterlimit:10;}
+	.st3{fill:#CED3DD; stroke:none;}
+	.st4{fill:#56638A; opacity: 1;}
+	.st5{fill:none;stroke:#56638A;stroke-width:2;stroke-miterlimit:10;}
+	.st6{fill:none;}
+}
+
+// styling countries
+#south-africa, #botswana, #zimbabwe, #malawi, #zambia, #kenya, #uganda, #rwanda, #tanzania {
+    transition: fill 0.2s ease;
+    fill: white;
+    @include mQ ($lg, 'landscape'){
+        &:hover{
+            fill: $green;
+        }
+        &:active{
+            fill: white;
+        }
+        &:focus{
+            fill: white;
+        }
+    }
+}
+#south-africa.active, #botswana.active, #zimbabwe.active, #malawi.active, #zambia.active, #kenya.active, #uganda.active, #rwanda.active, #tanzania.active {
+    transition: fill 0.2s ease;
+    fill: $green;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                     Map                                    */
+/* -------------------------------------------------------------------------- */
+.map-container{
+    background: $pale-grey;
+    position: relative;
+    @include mQ ($md){
+        background: none;
+    }
+    @include mQ ($lg){
+        padding: 0;
+        margin: 0;
+    }
+}
+// desktop map container
+#lgScreen-map{
+    height: 85vh;
+    width: 100vw;
+    position: absolute;
+    top: -5vh;
+    @include mQ ($lg){
+        width: auto;
+        height: 100vh;
+        overflow-y: hidden;
+    }
+    @include mQ ($xxl){
+        width: 100vw;
+    }
+}
+// svg of map (desktop)
+#lgScreen-map svg{
+    height: 100vh;
+    transform: translate(-40%, -10vh);
+    left: 0;
+    z-index: 0;
+    @include mQ ($md){
+        height: 130vh;
+        transform: translate( -40%, -25%);
+    }
+    @include mQ ($lg){
+        height: 160vh;
+        transform: translate( -33%, -25%);
+    }
+    @include mQ ($xxl){
+        transform: translate( -33%, -20%);
+    }
+}
+// top heading showing on tablets and xxl screens
+#lgScreen-map #top-map-heading{
+    background: rgb(86,99,138);
+    background: linear-gradient(0deg, rgba(86,99,138,0) 0%, rgba(86,99,138,1) 75%);
+    z-index: 100;
+    width: 100vw;
+    height: 25vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 5vh;
+    h2{
+        color: white;
+    }
+}
+// invisible div - to give height to the desktop map div
+#lgScreen-height-guide{
+    height: 80vh;
+    z-index: -1000;
+    position: relative;
+    width: 2%;
+    pointer-events: none;
+    @include mQ ($lg){
+        height: 100vh;
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                             Map search results                             */
+/* -------------------------------------------------------------------------- */
+// div containing all elements
+#map-results{
+    position: absolute;
+    top: 0;
+    right: -50vw;
+    transition: all 0.2s ease;
+    width: 50%;
+    @include mQ ($md) {
+        top: 15vh;
+        width: 50%;
+    }
+    @include mQ ($lg){
+        right: 15px;
+        width: 35%;
+        top: 0;
+        opacity: 0;
+    }
+    @include mQ ($xxl){
+        top: 24vh;
+        right: 50%;
+        width: 15%;
+    }
+}
+#map-results.active{
+    right: 10px;
+    transition: all 0.2s ease;
+    @include mQ ($lg){
+        right: 15px;
+        opacity: 1;
+    }
+    @include mQ ($xxl){
+        right: 50%;
+    }
+}
+// close button (mobile only)
+.close-map-results .close-btn{
+    background: white;
+    border-radius: 50px;
+    width: 2rem;
+    height: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: $grey;
+    box-shadow: -1px 6px 5px -3px $dark-grey;
+    margin-bottom: 10px;
+    i{
+        transition: transform 0.3s ease-in;
+    }
+}
+.spin{
+    i{
+        transform: rotate(180deg);
+        transition: transform 0.3s ease-in;
+    }
+}
+// down button
+.chevron-down .next-btn{
+    background: white;
+    border-radius: 10px;
+    height: 1.5rem;
+    width: 6rem;
+    font-size: 1.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: $grey;
+    box-shadow: -1px 6px 5px -3px $dark-grey;
+    margin-bottom: 10px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+// div containing individual search result
+.country-result-actual{
+    transition: opacity 0.5s ease-in;
+    opacity: 1;
+    padding: 10px;
+}
+// default white block containing result and also country
+.country-result-block{
+    background: rgba(white, 0.9);
+    border-radius: 10px;
+    box-shadow: -1px 6px 5px -3px $dark-grey;
+    margin-bottom: 5px;
+    @include mQ ($lg){
+        box-shadow: 3px 6px 5px -3px $dark-grey;
+    }
+}
+.country-result-block h2{
+    color: $dark-grey;
+    font-size: 1rem;
+    @include mQ ($xxl){
+        font-size: 1.4rem;
+    }
+}
+.country-result-block p{
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    @include mQ ($md){
+        font-size: 1rem;
+    }
+    @include mQ ($xxl){
+        font-size: 1.2rem;
+    }
+}
+.country-result-block a.btn.btn-light.btn-issue-general.btn-sm{
+    @include mQ ($md){
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+}
+.country-result-block .read-map-btn.btn-light.btn-sm{
+    font-size: 0.8rem;
+    background: white;
+    box-shadow: -1px 6px 5px -3px $dark-grey;
+    transition: all ease 0.3s;
+    @include mQ ($md){
+        font-size: 1rem;
+    }
+    @include mQ ($xxl){
+        font-size: 1.2rem;
+    }
+    &:hover{
+        background: $green;
+        border: $green 2px solid;
+        color: white;
+    }
+}
+.country-result-block .search-description{
+    font-size: 0.7rem;
+    @include mQ ($md) {
+        font-size: 1rem;
+    }
+    @include mQ ($xxl){
+        font-size: 1.2rem;
+    }
+}
+.country-name{
+    padding: 10px 10px 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mQ ($md){
+        h2{
+            font-size: 1.2rem;
+        }
+    }
+    @include mQ ($xxl){
+        h2{
+            font-size: 1.4rem;
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                        Javascript uses these styles                        */
+/* -------------------------------------------------------------------------- */
+.hide{
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 SVG tooltip                                */
+/* -------------------------------------------------------------------------- */
+#map-tooltip{
+    position: absolute;
+    width: 120px;
+    height: auto;
+    bottom: 0;
+    top: 30px;
+    left: 0;
+    @include mQ ($md){
+        width: 150px;
+        bottom: 100px;
+        left: 40vw;
+        top: auto;
+    }
+    @include mQ ($lg){
+        left: 50px;
+        top: 30px;
+        bottom: auto;
+    }
+    @include mQ ($xxl) {
+        left: 50px;
+        bottom: 20vh;
+        top: auto;
+        width: 200px;
+    }
+}

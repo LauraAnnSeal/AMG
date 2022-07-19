@@ -1,0 +1,153 @@
+@import 'var', 'buttons', 'nav-menu', 'homepage', 'home-tabs', 'context-slider', 'map', 'project-page', 'audio-player', 'footer', 'search', 'context-single', 'other-pages', '404-page';
+
+/* Theme Name: WAN-IFRA AMG WEBSITE
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: pg-may
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+PG May is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/* -------------------------------------------------------------------------- */
+/*                              temp page content                             */
+/* -------------------------------------------------------------------------- */
+.temp-page{
+    background: rgb(125,223,100);
+    background: linear-gradient(0deg, rgba(125,223,100,1) 36%, rgba(37,195,209,1) 100%);
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $heading-font;
+    font-size: 2rem;
+}
+
+body{
+    font-family: $text-font;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: white;
+    color: $dark-grey;
+    font-size: 1rem;
+}
+
+.invisible-menu-start{
+    opacity: 0;
+    transform: translateX(-200px);
+}
+.invisible-menu{
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.not-invisible-menu{
+    opacity: 1;
+    transform: translateX(1);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+h1{
+    font-family: $heading-font;
+    color: $charcoal;
+    font-size: 1.4em;
+}
+
+h2{
+    font-family: $heading-font;
+    color: $charcoal;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+h3{
+    font-family: $heading-font;
+    color: $light-grey;
+    font-size: 1rem;
+}
+h4{
+    font-family: $heading-font;
+    font-size: 1rem;
+}
+h6{
+    font-family: $text-font;
+    color: $dark-grey;
+    font-size: 1.1rem;
+}
+p{
+    @include mQ ($xxl){
+        font-size: 1.2rem;
+    }
+}
+ul li{
+    &:not(:last-child){
+        margin-bottom: 5px;
+    }
+    
+}
+a{
+    color: $aqua;
+}
+.btn{
+    @include mQ ($xxl){
+        font-size: 1.2rem!important;
+    }
+}
+
+.header-text{
+    font-family: $heading-font;
+}
+hr{
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid $grey;
+}
+
+.my-video-box{
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 0!important;
+    background: black;
+    iframe {
+        margin: 0!important;
+        max-width: 100%;
+        min-width: 100%;
+        height: 250px;
+        @include mQ ($lg){
+            height: 350px;
+        }
+        @include mQ ($xxl){
+            height: 480px;
+        }
+    }
+}
+
+span.country-name{
+    text-transform: capitalize;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+
+

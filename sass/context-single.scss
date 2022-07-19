@@ -1,0 +1,22 @@
+.context-image img.img-fluid{
+    min-height: 100%
+}
+
+blockquote{
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 40px 0;
+}
+
+.author-image{
+    border-radius: 15px;
+    overflow: hidden;
+}
+#author-name{
+    display: block;
+    color: $charcoal;
+}
+#author-title{
+    display: block;
+    font-style: italic;
+}

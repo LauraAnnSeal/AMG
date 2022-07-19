@@ -1,0 +1,31 @@
+.search-query{
+    background: $pale-grey;
+    color: $charcoal;
+    border-radius: 15px;
+}
+
+.search-result{
+    background: white;
+    box-shadow: -1px 1px 10px -5px $grey;
+    border-radius: 15px;
+}
+
+.context-image{
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+}
+.search-result-context{
+    background: white;
+    box-shadow: -1px 1px 10px -5px $grey;
+    border-radius: 0 0  15px 15px;
+    overflow: hidden;
+}
+.white-box-on-page{
+    box-shadow: -1px 1px 10px -5px $grey;
+}
+#lg-menu{
+    padding-left: 3rem;
+}

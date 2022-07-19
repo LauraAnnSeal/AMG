@@ -1,0 +1,111 @@
+/* -------------------------------------------------------------------------- */
+/*                              Context Carousel                              */
+/* -------------------------------------------------------------------------- */
+.slider.slick-slider-context{
+    width: 100%;
+    .context-image{
+        height: 120px;
+        @include mQ ($lg){
+            height: 200px;
+        }
+    }
+    .search-title{
+        height: auto;
+        @include mQ ($md){
+            height: 6rem;
+        }
+        @include mQ ($lg){
+            height: 7rem;
+        }
+    }
+    .search-description{
+        @include mQ ($md){
+            height: 7rem;
+        }
+        @include mQ ($lg){
+            height: 8rem;
+        }
+    }
+    .search-org{
+        @include mQ ($md){
+            height: 5rem;
+        }
+    }
+    div.slick-inner{
+        padding: 5px;
+        margin: 0 10px;
+    }
+    
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            With Thanks Carousel                            */
+/* -------------------------------------------------------------------------- */
+.slick-slider-thanks{
+    .slick-inner{
+        background: white;
+        border-radius: 5px;
+        margin: 10px;
+        box-shadow: -1px 6px 5px -3px $dark-grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5rem;
+        img{
+            max-height: 4rem;
+        }
+        @include mQ ($md){
+            border-radius: 15px;
+            height: 8rem;
+            img{
+                max-height: 5rem;
+            }
+        }
+        @include mQ ($lg){
+            height: 12rem;
+            img{
+                max-height: 8rem;
+            }
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                           Grant Recipients Slider                          */
+/* -------------------------------------------------------------------------- */
+
+.slick-slider-recipients{
+    .slick-inner{
+        background: white;
+        border-radius: 5px;
+        margin: 10px;
+        box-shadow: -1px 6px 5px -3px $dark-grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5rem;
+        img{
+            max-height: 4rem;
+        }
+        @include mQ ($md){
+            border-radius: 15px;
+            height: 8rem;
+            img{
+                max-height: 5rem;
+            }
+        }
+        @include mQ ($lg){
+            height: 12rem;
+            img{
+                max-height: 8rem;
+            }
+        }
+        @include mQ ($xxl){
+            height: 15rem;
+            img{
+                max-height: 8rem;
+                max-width: 90%;
+            }
+        }
+    }
+}

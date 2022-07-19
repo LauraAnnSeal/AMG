@@ -1,0 +1,134 @@
+/* -------------------------------------------------------------------------- */
+/*                              Open & close tabs                             */
+/* -------------------------------------------------------------------------- */
+.tab-row{
+    position: relative;
+}
+.tab{
+    padding-top: 10px;
+    cursor: pointer;
+}
+.tab-1{
+    border-radius: 5px 25px 0 0;
+}
+.tab-2{
+    border-radius: 25px 5px 0 0 ;
+    padding-left: 25px; 
+}
+.tab-open{
+    // order: 1px solid $light-grey;
+    background: white;
+}
+.tab-closed{
+    background: $dark-grey;
+    color: white;
+}
+.tab-background{
+    background: $dark-grey;
+    position: absolute;
+    border-radius: 5px; 
+    width: 80%;
+    z-index: -1;
+}
+.tab-contents{
+    border-radius: 0 0 5px 5px;
+    box-shadow: -1px 6px 5px -3px $light-grey;
+}
+
+.number{
+    font-family: $number-font;
+    color: $grey;
+    font-size: 2.3rem;
+}
+#key-issues-heading{
+    font-family: $heading-font;
+    text-transform: uppercase;
+    color: $grey;
+    font-size: 2rem;
+}
+a.btn-home{
+    display: inline-block;
+    .icon{
+        border-radius: 5px!important;
+        padding: 4px;
+        width: 2.8rem;
+        height: 2.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 95%;
+        }
+    }
+    
+}
+.tab-contents .col-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#project-stats{
+    h6{
+        line-height: 1.5em;
+        @include mQ ($xxl){
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+    }
+}
+span.highlighted-number{
+    background: $green;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 3px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Always open tabs                              */
+/* -------------------------------------------------------------------------- */
+.tab-heading, .tab-text{
+    margin-top: 0;
+    margin-bottom: 0;
+    box-shadow: -1px 6px 5px -3px $dark-grey;
+    padding: 15px;
+}
+.tab-heading{
+    h2{
+        color: white;
+    }
+    border-radius: 15px;
+    text-align: center;
+}
+.tab-text{
+    transform: translateY(-15px);
+    border-radius: 0 0 15px 15px;
+
+}
+.tabs-container{
+    @include mQ ($lg){
+        z-index: 1000;
+    }
+    @include mQ ($xxl){
+        position: absolute;
+        top: 30vh;
+        right: 0;
+    }
+}
+.tab-logos{
+    @include mQ ($lg){
+        img.img-fluid{
+            max-height: 75px!important;
+        }
+    }
+}
+#open-tabs{
+    z-index: 1000;
+    @include mQ ($xxl){
+        position: absolute;
+        top: 30vh;
+        right: 2.5vw;
+    }
+}
+
+
+

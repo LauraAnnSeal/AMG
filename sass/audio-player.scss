@@ -1,0 +1,24 @@
+.audio-box{
+    background: $pale-grey;
+    box-shadow: -1px 6px 5px -3px $light-grey;
+    border-radius: 15px;
+    span{
+        display: block;
+    }
+    #audio-creator{
+        font-size: 0.8em;
+    }
+}
+
+#play-icon, #pause-icon{
+    font-size: 2em;
+}
+#audio-time{
+    width: 100%;
+}
+input[type=range]::-webkit-slider-thumb {
+    background-color: $green;
+  }
+  #current-time{
+      color: $green;
+  }

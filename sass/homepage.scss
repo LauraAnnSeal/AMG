@@ -1,0 +1,139 @@
+h1.homepage{
+    color: $green;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    @include mQ ($xxl){
+        font-size: 3rem;
+    }
+}
+h2.homepage{
+    color: $light-grey;
+    text-transform: none;
+    @include mQ ($xxl){
+        font-size: 1.7rem;
+    }
+    
+}
+
+// key issues
+.home-title-container{
+    h2{
+        color: $grey;
+    }
+    h2 large {
+        font-size: 2rem;
+        @include mQ ($xxl){
+            font-size: 3rem;
+        }
+    }
+    h2 small{
+        font-size: 1.2rem;
+        @include mQ ($xxl){
+            font-size: 1.7rem;
+        }
+    }
+}
+.ki-block{
+    @include mQ ($lg){
+        display: block;
+    }
+    @include mQ ($xxl){
+        background: $pale-grey;
+        border-radius: 25px;
+        border: solid white 5px;
+        padding-top: 25px;
+    }
+}
+
+// holder of the entire legend
+#ki-buttons-container{
+    margin-top: 3rem;
+    .row{
+        @include mQ ($md){
+            margin-top: 30px;
+        }
+    }
+    &:not(:first-child){
+        margin-top: 1rem;
+    }
+}
+// holder of legend individual text
+.ki-description{
+    @include mQ ($lg){
+        text-align: center;
+        margin-top: 10px;
+    }
+    @include mQ ($xxl){
+        h4{
+            font-size: 1.3rem;
+        }
+    }
+    @include mQ ($xxl){
+        text-align: center;
+    }
+    ul{
+        li{
+            display: block;
+        }
+        padding: 0 10px 0 10px;
+    }
+}
+// holder of legend individual icon div
+.ki-icon-holder{
+    text-align: right;
+    @include mQ ($lg){
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+// icon only div
+.ki-icon{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -1px 6px 5px -3px $dark-grey;
+    a{
+        text-align: center;
+    }
+    img{
+        height: 3rem;
+        width: auto;
+    }
+    @include mQ ($md){
+        width: 6rem;
+        height: 6rem;
+        img{
+            height: 4.5rem;
+        }
+    }
+    @include mQ ($lg){
+        width: 9rem;
+        height: 9rem;
+    }
+    @include mQ ($xxl){
+        width: 12rem;
+        height: 12rem;
+        img{
+            height: 6rem;
+        }
+    }
+}
+// coloring individual icons
+.ki-icon.energy{
+     background: $orange;
+}
+.ki-icon.land{
+     background: $green;
+}
+.ki-icon.water{
+     background: $aqua;
+}
+.ki-icon.conservation{
+     background: $indigo;
+}
+.ki-icon.responses{
+     background: $red;
+}
