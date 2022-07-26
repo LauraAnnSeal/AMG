@@ -920,7 +920,12 @@ span.highlighted-number {
 }
 @media only screen and (min-width: 992px) {
   .slider.slick-slider-context .search-title {
-    height: 7rem;
+    height: 9rem;
+  }
+}
+@media only screen and (min-width: 2500px) {
+  .slider.slick-slider-context .search-title {
+    height: 6rem;
   }
 }
 @media only screen and (min-width: 768px) {

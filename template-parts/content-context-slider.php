@@ -31,7 +31,7 @@ $the_query = new WP_Query( $args );
                         <div class="search-description mt-4">
                             <?php echo get_field('article') ?>
                         </div>
-                        <div class="col-12 row my-4 search-org">
+                        <div class="col-12 row my-4 search-org d-flex justify-content-start align-items-end">
                             <div class="col-6 col-lg-6 col-xxl-4">
                                 <img class="img-fluid" src="<?php the_field('logo') ?>" alt="<?php echo esc_attr(get_field('logo')['alt']); ?>" />
                             </div>

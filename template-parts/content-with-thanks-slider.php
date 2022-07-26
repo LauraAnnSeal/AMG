@@ -1,40 +1,32 @@
 
 
+            <?php 
 
-            <!-- Begin: slide -->
-            <div class="slick-single-slide">
-                <div class="slick-inner">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/logos/UNEP-logo.png" alt="" class="img-fluid">
-                </div>
-            </div>
-            <!-- End: slide -->
-            <!-- Begin: slide -->
-            <div class="slick-single-slide">
-                <div class="slick-inner">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/logos/Earth-Journalism-Network-logo.png" alt="" class="img-fluid">
-                </div>
-            </div>
-            <!-- End: slide -->
-            <!-- Begin: slide -->
-            <div class="slick-single-slide">
-                <div class="slick-inner">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/logos/climate-tracker-logo.png" alt="" class="img-fluid">
-                </div>
-            </div>
-            <!-- End: slide -->
-            <!-- Begin: slide -->
-            <div class="slick-single-slide">
-                <div class="slick-inner">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/logos/constructive-institute-logo.png" alt="" class="img-fluid">
-                </div>
-            </div>
-            <!-- End: slide -->
-            <!-- Begin: slide -->
-            <div class="slick-single-slide">
-                <div class="slick-inner">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/logos/UCT-logo.jpeg" alt="" class="img-fluid">
-                </div>
-            </div>
-            <!-- End: slide -->
+$posts = get_posts(array(
+	'posts_per_page'	=> -1,
+	'post_type'			=> 'with_thanks_to'
+));
 
+if( $posts ): ?>
+	
+		
+	<?php foreach( $posts as $post ): 
+		
+		setup_postdata( $post );
+		
+		?>
+		<!-- Begin: slide -->
+        <div class="slick-single-slide">
+            <div class="slick-inner">
+                <?php $image = get_field('logo')?>
+                <img src="<?php echo esc_url($image['url']);  ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="img-fluid">
+            </div>
+        </div>
+        <!-- End: slide -->
+	
+	<?php endforeach; ?>
+	
+	<?php wp_reset_postdata(); ?>
+
+<?php endif; ?>
 

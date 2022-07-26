@@ -15,7 +15,10 @@
             height: 6rem;
         }
         @include mQ ($lg){
-            height: 7rem;
+            height: 9rem;
+        }
+        @include mQ ($xxl){
+            height: 6rem;
         }
     }
     .search-description{
